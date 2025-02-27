@@ -1,0 +1,371 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    text-align: center;  
+}
+
+body {
+    font-family: 'Poppins';
+    line-height: 1.6;
+    color: #444; /* Mudando para um tom mais suave de cinza */
+    background: #f9f9f9; /* Fundo mais claro para o body */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+
+nav ul li a {
+    color: #444; /* Cor de link mais suave */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+#hero {
+    background: #e0f7fa; /* Fundo mais claro e suave */
+    padding: 100px 0;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #00acc1; /* Tom suave de azul */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Sobre Section */
+#sobre {
+    padding: 80px 0;
+}
+
+#sobre h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sobre-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-imagem {
+    flex: 1;
+    text-align: center;
+}
+
+.imagem-placeholder {
+    width: 100%;
+    height: 300px;
+    background: #b0bec5; /* Tom mais suave de cinza para o placeholder */
+    border-radius: 10px;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .sobre-content {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        text-align: center;
+    }
+
+    .sobre-texto, .sobre-imagem {
+        flex: none; /* Remove o comportamento de flex */
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .imagem-placeholder {
+        height: 200px; /* Reduz o tamanho da imagem para caber melhor na tela */
+    }
+}
+
+/* Serviços Section */
+#servicos {
+    background: #e1f5fe; /* Fundo bem claro e suave de azul */
+    padding: 80px 0;
+}
+
+#servicos h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/*
+.servicos-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.servico {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    flex: 1;
+}
+*/
+
+
+/* Estilo para a grid de serviços */
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px; /* Espaçamento entre os cards */
+}
+
+.servico {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query para telas pequenas (celulares) */
+@media (max-width: 768px) {
+    .servicos-grid {
+        grid-template-columns: 1fr; /* 1 coluna, cards empilhados */
+    }
+}
+
+.servico h3 {
+    margin-bottom: 10px;
+}
+
+/*Telas Menores*/
+/* Media query para telas médias (tablets) */
+@media (max-width: 1024px) {
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+    }
+}
+
+/* Media query para telas pequenas (smartphones) */
+@media (max-width: 768px) {
+    .servicos-grid {
+        grid-template-columns: 1fr; /* 1 coluna para telas pequenas */
+    }
+
+    #servicos h2 {
+        font-size: 1.5em;
+    }
+
+    .servico {
+        padding: 15px; /* Menos padding em telas pequenas */
+    }
+
+    .servico h3 {
+        font-size: 1.3em;
+    }
+
+    .servico p {
+        font-size: 0.95em;
+    }
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc; /* Bordas mais suaves */
+    border-radius: 5px;
+}
+
+form button {
+    background: #00acc1; /* Cor do botão mais suave */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #f0f0f0; /* Fundo claro no footer */
+    color: #444; /* Texto claro no footer */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.btn {
+    background: #00acc1; /* Cor do fundo */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center; /* Alinha o ícone e o texto verticalmente */
+}
+
+.btn i {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    font-size: 1.2em; /* Tamanho do ícone */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* Header */
+header {
+    background: #f0f0f0; /* Fundo claro */
+    color: #444; /* Cor do texto mais suave */
+    padding: 10px 0; /* Reduzir o padding */
+}
+
+header h1 {
+    text-align: center;
+    margin: 0; /* Remover margens */
+    padding: 0; /* Remover padding */
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/*Alinhamento da Logo*/
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center; /* Centraliza o conteúdo */
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Centraliza os itens na horizontal */
+    justify-content: center; /* Centraliza na vertical */
+    padding: 20px 0;
+}
+
+.logo img {
+    max-width: 150px; /* Ajuste conforme necessário */
+    height: auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Estilização da navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centraliza os links */
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#redes-sociais {
+    background: #f4f4f4;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#redes-sociais h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #0073e6; /* Muda a cor quando o ícone é hover */
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icon {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
