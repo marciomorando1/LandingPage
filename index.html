@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
     <header>
@@ -26,7 +27,7 @@
         </div>
     </header>
 
-    <section id="sobre">
+    <section id="sobre" data-aos="zoom-in">
         <div class="container">
             <h2>Sobre Mim</h2>
             <div class="sobre-content">
@@ -34,14 +35,15 @@
                     <p>Psicóloga especializada no atendimento de crianças e adolescentes, com foco no desenvolvimento emocional, comportamental e acadêmico. Com formação em Análise do Comportamento Aplicada (ABA) e experiência no trabalho com crianças e adolescentes com autismo, oferecendo suporte individualizado e efetivo. Realizo avaliação psicológica, orientação para pais, treinamento de habilidades sociais e apoio escolar, promovendo inclusão e desenvolvimento. Também ofereço palestras em escolas sobre saúde mental, estratégias para o manejo do autismo no ambiente escolar e desafios comportamentais. Entre em contato para saber como posso ajudar no cuidado e bem-estar das crianças e jovens.</p>
                 </div>
                 <div class="sobre-imagem">
-                    <!-- Espaço para imagem -->
-                    <div class="imagem-placeholder"></div>
+                    <div class="imagem-placeholder">
+                        <img src="foto_page_1.jpeg"/>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="hero">
+    <section id="hero" data-aos="fade-up" >
         <div class="container">
             <h2>Bem-vindo ao meu consultório. Como posso ajudar?</h2>
             <p>Meu trabalho inclui atendimento individual, orientação parental e suporte a escolas, garantindo um ambiente seguro e saudável para o desenvolvimento infantil. <br>
@@ -54,7 +56,7 @@
         </div>
     </section>
 
-    <section id="servicos">
+    <section id="servicos" data-aos="zoom-in">
         <div class="container">
             <h2>Como Funciona</h2>
             <div class="servicos-grid">
@@ -78,7 +80,7 @@
         </div>
     </section>
 
-    <section id="redes-sociais">
+    <section id="redes-sociais" data-aos="fade-up">
         <div class="container">
             <h1>Redes Sociais</h1>
             <div class="social-icons">
@@ -131,5 +133,11 @@
             <p>&copy; 2025 Psicóloga Sthefhany Fachim. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>
