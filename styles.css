@@ -5,15 +5,12 @@
     box-sizing: border-box;
 }
 
-p {
-    text-align: center;  
-}
-
 body {
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: #444; /* Mudando para um tom mais suave de cinza */
-    background: #f9f9f9; /* Fundo mais claro para o body */
+    color: #444;
+    background: #f9f9f9;
+    text-align: center;
 }
 
 .container {
@@ -22,26 +19,75 @@ body {
     margin: 0 auto;
 }
 
-nav ul {
-    list-style: none;
+/* Tipografia */
+h1, h2, h3 {
+    color: #333;
+}
+
+p {
     text-align: center;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+/* Header e Navegação */
+header {
+    background: #f0f0f0;
+    color: #444;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
 
 nav ul li a {
-    color: #444; /* Cor de link mais suave */
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Botões */
+.btn {
+    background: #00acc1;
+    color: #fff;
+    padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn i {
+    margin-right: 10px;
+    font-size: 1.2em;
 }
 
 /* Hero Section */
 #hero {
-    background: #e0f7fa; /* Fundo mais claro e suave */
+    background: #e0f7fa;
     padding: 100px 0;
     text-align: center;
 }
@@ -54,15 +100,6 @@ nav ul li a {
 #hero p {
     font-size: 1.2em;
     margin-bottom: 30px;
-}
-
-.btn {
-    background: #00acc1; /* Tom suave de azul */
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
 }
 
 /* Sobre Section */
@@ -93,81 +130,33 @@ nav ul li a {
 .imagem-placeholder {
     width: 100%;
     height: 600px;
-    background: #b0bec5; 
+    background: #b0bec5;
     border-radius: 10px;
 }
-    
-/*
-.imagem-placeholder {
-    width: 500px; 
-    height: 500px;
-    background-image: url('foto_page_1.jpeg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 50px; 
-}
-*/
+
 .imagem-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Mantém o preenchimento sem deformar */
+    object-fit: cover;
     border-radius: 10px;
-}
-
-/* Ajuste para telas menores */
-@media (max-width: 768px) {
-    .sobre-content {
-        flex-direction: column; /* Empilha os elementos verticalmente */
-        text-align: center;
-    }
-
-    .sobre-texto, .sobre-imagem {
-        flex: none; /* Remove o comportamento de flex */
-        width: 100%; /* Ocupa toda a largura disponível */
-    }
-
-    /*
-    .imagem-placeholder {
-        height: 300px; 
-        width: 400px; 
-    }
-    */
-    
 }
 
 /* Serviços Section */
 #servicos {
-    background: #e1f5fe; /* Fundo bem claro e suave de azul */
+    background: #e1f5fe;
     padding: 80px 0;
 }
 
 #servicos h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 }
 
-/*
 .servicos-grid {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-}
-
-.servico {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    flex: 1;
-}
-*/
-
-
-/* Estilo para a grid de serviços */
-.servicos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
-    gap: 20px; /* Espaçamento entre os cards */
+    justify-content: center;
 }
 
 .servico {
@@ -175,50 +164,66 @@ nav ul li a {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Media query para telas pequenas (celulares) */
-@media (max-width: 768px) {
-    .servicos-grid {
-        grid-template-columns: 1fr; /* 1 coluna, cards empilhados */
-    }
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
 }
 
 .servico h3 {
     margin-bottom: 10px;
+    text-align: center;
 }
 
-/*Telas Menores*/
-/* Media query para telas médias (tablets) */
-@media (max-width: 1024px) {
-    .servicos-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
-    }
+.servico p {
+    text-align: center;
 }
 
-/* Media query para telas pequenas (smartphones) */
-@media (max-width: 768px) {
-    .servicos-grid {
-        grid-template-columns: 1fr; /* 1 coluna para telas pequenas */
-    }
-
-    #servicos h2 {
-        font-size: 1.5em;
-    }
-
-    .servico {
-        padding: 15px; /* Menos padding em telas pequenas */
-    }
-
-    .servico h3 {
-        font-size: 1.3em;
-    }
-
-    .servico p {
-        font-size: 0.95em;
-    }
+/* Redes Sociais Section */
+#redes-sociais {
+    background: #f4f4f4;
+    padding: 40px 0;
+    text-align: center;
 }
 
+#redes-sociais h1 {
+    text-align: center;
+    margin-bottom: 5px; 
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 5px auto;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.social-icon i {
+    line-height: 1;
+}
+
+.social-icon:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Formulário */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -229,12 +234,12 @@ form {
 
 form input, form textarea {
     padding: 10px;
-    border: 1px solid #ccc; /* Bordas mais suaves */
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 form button {
-    background: #00acc1; /* Cor do botão mais suave */
+    background: #00acc1;
     color: #fff;
     padding: 10px;
     border: none;
@@ -245,148 +250,43 @@ form button {
 
 /* Footer */
 footer {
-    background: #f0f0f0; /* Fundo claro no footer */
-    color: #444; /* Texto claro no footer */
-    text-align: center;
-    padding: 20px 0;
-}
-
-.btn {
-    background: #00acc1; /* Cor do fundo */
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    display: inline-flex;
-    align-items: center; /* Alinha o ícone e o texto verticalmente */
-}
-
-.btn i {
-    margin-right: 10px; /* Espaço entre o ícone e o texto */
-    font-size: 1.2em; /* Tamanho do ícone */
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-
-/* Header */
-header {
-    background: #f0f0f0; /* Fundo claro */
-    color: #444; /* Cor do texto mais suave */
-    padding: 10px 0; /* Reduzir o padding */
-}
-
-header h1 {
-    text-align: center;
-    margin: 0; /* Remover margens */
-    padding: 0; /* Remover padding */
-    font-size: 2em;
-    font-weight: bold;
-}
-
-/*Alinhamento da Logo*/
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    text-align: center; /* Centraliza o conteúdo */
-    font-family: Arial, sans-serif;
-}
-
-header {
-    display: flex;
-    flex-direction: column; /* Empilha os elementos verticalmente */
-    align-items: center; /* Centraliza os itens na horizontal */
-    justify-content: center; /* Centraliza na vertical */
-    padding: 20px 0;
-}
-
-.logo img {
-    max-width: 150px; /* Ajuste conforme necessário */
-    height: auto;
-}
-
-h1 {
-    font-size: 24px;
-    margin: 10px 0;
-    color: #333;
-}
-
-/* Estilização da navegação */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center; /* Centraliza os links */
-    gap: 20px;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
-    text-decoration: none;
+    background: #f0f0f0;
     color: #444;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-#redes-sociais {
-    background: #f4f4f4;
-    padding: 40px 0;
     text-align: center;
+    padding: 20px 0;
 }
 
-#redes-sociais h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #333;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-icon {
-    font-size: 2rem;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.social-icon:hover {
-    color: #0073e6; /* Muda a cor quando o ícone é hover */
-}
-
+/* Responsividade */
 @media (max-width: 768px) {
-    .social-icons {
+    .sobre-content {
         flex-direction: column;
-        gap: 10px;
+        text-align: center;
     }
 
-    .social-icon {
-        font-size: 1.8rem;
+    .sobre-texto, .sobre-imagem {
+        flex: none;
+        width: 100%;
+    }
+
+    .servico {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    .social-icons {
+        gap: 15px;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 480px) {
+    .servico {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .social-icons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
